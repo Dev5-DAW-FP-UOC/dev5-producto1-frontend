@@ -3,39 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volunet</title>
+    <title>Volunet - Dashboard</title>
+    <!-- Bootstrap CSS por CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Bootstrap Iconspor CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- CSS -->
+    <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
-    <!-- NAVBAR (Dashboard activo) -->     
-    <nav class="navbar navbar-expand-lg border-bottom">
+    <!-- Barra de navegación -->     
+    <nav class="navbar navbar-expand-lg bg-white border-bottom">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">Volunet</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand d-flex aling-items-center" href="index.html">
+                <img src="/assets/img/logo_volunet.png" alt="Logo Volunte" height="36" class="me-2" style="max-width:130px; object-fit:contain;">                
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarMain" aria-controls="navMain" aria-expanded="false" aria-label="Mostrar menú">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse " id="navBarMain">
-                <ul class="navbar-nav navbar-nav mx-auto me-lg-auto mb-2 mb-lg-0 text-center text-lg-start">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-4">
                     <li class="nav-item"><a class="nav-link active fw-semibold" aria-current="page" href="index.html">Dashboard</a></li>
-                    <li class="nav-item"><a class="nav-link" href="voluntariados.html">Gestion de voluntarioados</a></li>
-                    <li class="nav-item"><a class="nav-link" href="usuarios.html">Gestion de usuarios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="voluntariados.html">Gestión de voluntarioados</a></li>
+                    <li class="nav-item"><a class="nav-link" href="usuarios.html">Gestión de usuarios</a></li>
                     <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item d-flex algn-items-center ms-3">
+                        <span id="usuarioActivo" class="text-secondary" aria-label="Usuario actual">
+                            <i class="bi bi-person-circle fs-5 me-1"></i>
+                            -no login-
+                        </span>
+                    </li>
                 </ul>
-                <span class="navbar-text"><i class="bi bi-person-circle"></i> <span id="usuarioActivo">-no login-</span></span>
             </div>
         </div>
     </nav>
 
     <!-- CONTENIDO -->
-     <main>
-        <div>
-            <!-- <h1 class="h3 m-0">Dashboard de Voluntariado</h1> -->
+     <main class="container my-4" id="mainContent">
+        <h1 class="mb-4">Dashboard de Voluntariados</h1>
+        <!-- Filtros -->
+        <div class="d-flex flex-wrap gap-3 mb-4 align-items-center">
+            <div>
+                <span class="fw-semibold me-2">Tipo:</span>
+                <button class="btn btn-outline-primary btn-sm me-1 filtro-tipo active" data-tipo="todos">
+                    <i class="bi bi-ui-checks-grid me-1"></i> Todos
+                </button>
+                <button class="btn btn-outline-warning btn-sm me-1 filtro-tipo" data-tipo="oferta">
+                    <i class="bi bi-arrow-up-right-circle me-1"></i> Oferta
+                </button>
+                <button class="btn btn-outline-danger btn-sm filtro-tipo" data-tipo="peticion">
+                    <i class="bi bi-arrow-down-left-circle me-1"></i> Petición
+                </button>
+            </div>
+            <div>
+                <span class="fw-semibold me-2">Categoría:</span>
+                <button class="btn btn-outline-secondary btn-sm me-1 filtro-cat active" data-cat="todas">
+                    <i class="bi bi-ui-checks me-1"></i> Todas
+                </button>
+                <button class="btn btn-outline-info btn-sm me-1 filtro-cat" data-cat="idiomas">
+                    <i class="bi bi-book me-1"></i> Idiomas
+                </button>
+                <button class="btn btn-outline-success btn-sm me-1 filtro-cat" data-cat="deportes">
+                    <i class="bi bi-trophy me-1"></i> Deportes
+                </button>
+                <button class="btn btn-outline-warning btn-sm filtro-cat" data-cat="profesiones">
+                    <i class="bi bi-briefcase me-1"></i> Profesiones
+                </button>
+            </div>
         </div>
-        
+        <!-- Contenedor de tarjetas -->
+        <div class="row" id="voluntariadosLista">
+            <!-- JS vanilla renderiza las tarjetas -->
+        </div>
      </main>
+    <!-- JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+     <!-- JS Vanilla -->
+    <script src="js/datos.js"></script>
+    <script src="js/dashboard.js"></script>
     
-     <!-- JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

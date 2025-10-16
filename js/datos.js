@@ -1,5 +1,41 @@
 // js/datos.js
 
+// js/datos.js
+const voluntariados = [
+  {
+    id: 1,
+    tipo: "oferta", // "oferta" o "peticion"
+    categoria: "idiomas",
+    titulo: "Clases de inglés A2 - Conversación",
+    autor: "Ana",
+    modalidad: "Online",
+    descripcion: "Sesiones prácticas centradas en speaking y vocabulario de situaciones reales.",
+    fecha: "2025-10-07"
+  },
+  {
+    id: 2,
+    tipo: "peticion",
+    categoria: "deportes",
+    titulo: "Busco entrenador de running",
+    autor: "Luis",
+    modalidad: "Presencial",
+    descripcion: "Me gustaría mejorar mi técnica para preparar una 10K.",
+    fecha: "2025-11-15"
+  },
+  {
+    id: 3,
+    tipo: "oferta",
+    categoria: "profesiones",
+    titulo: "Mentoría en diseño gráfico",
+    autor: "María",
+    modalidad: "Online",
+    descripcion: "Asesoría para mejorar portfolio y orientación laboral en sector creativo.",
+    fecha: "2025-10-22"
+  }
+  // ...añade más registros para probar el dashboard
+];
+
+/* 
 export const CATEGORIAS = ["Idiomas", "Profesiones", "Deportes"];
 export const TIPO = ["Oferta", "Peticion"];
 
@@ -20,4 +56,4 @@ export let voluntariados = [
     {id: 8, titulo: "Asesoría de CV y entrevistas (IT)", descripción: "Soy profesional de Recursos Humanos en el sector IT. Ofrezco mi tiempo para revisar currículums, cartas de presentación y simular entrevistas de trabajo. Sesiones de 1 hora.", fecha: "22/11/2025", tipo: "Oferta", categoria: "Profesiones"},
     {id: 9, titulo: "Clases de natación para principiantes", descripción: "Ofrezco enseñar los conceptos básicos de natación a niños o adultos que estén empezando. Solo fines de semana en piscina pública. Soy socorrista certificado.", fecha: "05/12/2025", tipo: "Oferta", categoria: "Deportes"},
     {id: 10, titulo: "Traducción simple (Francés-Español)", descripción: "Ofrezco traducciones voluntarias sencillas de textos cortos o corrección de documentos entre francés y español (o viceversa). Nivel C1 en francés.", fecha: "29/11/2022", tipo: "Oferta", categoria:"Idiomas"}
-];
+]; */

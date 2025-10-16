@@ -1,0 +1,123 @@
+:root {
+  --color-azul: #2860c8;
+  --color-idiomas: #64b5f6;
+  --color-profesiones: #26a69a;
+  --color-deportes: #ffb74d;
+  --color-oferta: #ffe082;
+  --color-peticion: #ffcdd2;
+  --color-texto: #233045;
+  --color-fondo: #f9f9fc;
+  --color-blanco: #fff;
+  --color-borde: #e2e8f0;
+  --font-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font-base);
+  background: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+.navbar {
+  background: var(--color-blanco);
+  border-bottom: 1px solid var(--color-borde);
+}
+.navbar-brand span {
+  color: var(--color-azul) !important;
+}
+
+/* Iconos de categoría y tipo */
+.icon-idiomas { color: var(--color-idiomas) !important; }
+.icon-deportes { color: var(--color-deportes) !important; }
+.icon-profesiones { color: var(--color-profesiones) !important; }
+.icon-oferta { color: var(--color-oferta) !important; }
+.icon-peticion { color: var(--color-peticion) !important; }
+
+/* Icono dentro del badge de tipo (oferta/petición) */
+.icono-badge { color: #233045 !important; vertical-align: -0.1em; }
+
+/* Badges personalizados */
+.badge.idiomas { background: var(--color-idiomas) !important; color: #fff !important; }
+.badge.deportes { background: var(--color-deportes) !important; color: #fff !important; }
+.badge.profesiones { background: var(--color-profesiones) !important; color: #fff !important; }
+.badge.oferta { background: var(--color-oferta) !important; color: #6d5900 !important; }
+.badge.peticion { background: var(--color-peticion) !important; color: #b03e3e !important; }
+
+/* Card visual */
+.card {
+  border-radius: 1.2em;
+  background: var(--color-blanco);
+  box-shadow: 0 2px 6px 0 rgba(40,96,200,0.05);
+}
+
+/* Botones de filtro INACTIVOS con colores suaves */
+.filtro-tipo, .filtro-cat {
+  border-width: 2px !important;
+  font-weight: 500;
+  opacity: 0.90;
+}
+.filtro-tipo[data-tipo="todos"] {
+  border-color: var(--color-azul);
+  color: var(--color-azul);
+  background: transparent;
+}
+.filtro-tipo[data-tipo="oferta"] {
+  border-color: var(--color-oferta);
+  color: #6d5900;
+  background: transparent;
+}
+.filtro-tipo[data-tipo="peticion"] {
+  border-color: var(--color-peticion);
+  color: #b03e3e;
+  background: transparent;
+}
+.filtro-cat[data-cat="idiomas"] {
+  border-color: var(--color-idiomas);
+  color: var(--color-idiomas);
+  background: transparent;
+}
+.filtro-cat[data-cat="deportes"] {
+  border-color: var(--color-deportes);
+  color: var(--color-deportes);
+  background: transparent;
+}
+.filtro-cat[data-cat="profesiones"] {
+  border-color: var(--color-profesiones);
+  color: var(--color-profesiones);
+  background: transparent;
+}
+
+/* Botones de filtro ACTIVOS */
+.filtro-tipo.active[data-tipo="todos"] {
+  background: var(--color-azul) !important;
+  color: #fff !important;
+  border-color: var(--color-azul) !important;
+}
+.filtro-tipo.active[data-tipo="oferta"] {
+  background: var(--color-oferta) !important;
+  color: #6d5900 !important;
+  border-color: var(--color-oferta) !important;
+}
+.filtro-tipo.active[data-tipo="peticion"] {
+  background: var(--color-peticion) !important;
+  color: #b03e3e !important;
+  border-color: var(--color-peticion) !important;
+}
+.filtro-cat.active[data-cat="idiomas"] {
+  background: var(--color-idiomas) !important;
+  color: #fff !important;
+  border-color: var(--color-idiomas) !important;
+}
+.filtro-cat.active[data-cat="deportes"] {
+  background: var(--color-deportes) !important;
+  color: #fff !important;
+  border-color: var(--color-deportes) !important;
+}
+.filtro-cat.active[data-cat="profesiones"] {
+  background: var(--color-profesiones) !important;
+  color: #fff !important;
+  border-color: var(--color-profesiones) !important;
+}
+
+.fs-4 { font-size: 1.6em; }
+.fs-5 { font-size: 1.3em; }
