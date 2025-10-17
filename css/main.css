@@ -121,3 +121,32 @@ body {
 
 .fs-4 { font-size: 1.6em; }
 .fs-5 { font-size: 1.3em; }
+
+
+
+/* Gestón de voluntariados */
+.vol-item.card {
+  border-radius: 1.3em;
+  border: 1px solid var(--color-borde);
+  box-shadow: 0 2px 8px 0 rgba(40,96,200,0.03);
+  transition: box-shadow 0.2s;
+}
+.vol-item.card:hover {
+  box-shadow: 0 6px 24px 0 rgba(40,96,200,0.11);
+}
+.listado-voluntariados {
+  background: transparent;
+}
+.vol-item.card .card-body {
+  padding: 1.2em 1.5em;
+}
+
+/* Opcional: iconos verticales en móvil */
+@media (max-width: 767.98px) {
+  .vol-item .flex-md-row {
+    flex-direction: column !important;
+    gap: 0.3em !important;
+  }
+}
+
+/* Los badges ya están ocultos con d-none d-md-inline gracias a Bootstrap */

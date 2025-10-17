@@ -1,7 +1,7 @@
 // js/datos.js
 
 // js/datos.js
-const voluntariados = [
+window.voluntariados = [
   {
     id: 1,
     tipo: "oferta", // "oferta" o "peticion"
@@ -32,7 +32,6 @@ const voluntariados = [
     descripcion: "Asesoría para mejorar portfolio y orientación laboral en sector creativo.",
     fecha: "2025-10-22"
   }
-  // ...añade más registros para probar el dashboard
 ];
 
 /* 
