@@ -34,6 +34,23 @@ window.voluntariados = [
   }
 ];
 
+window.usuarios = [
+  {
+    id: 1,
+    nombre: "Ana Ruiz",
+    email: "ana@example.com",
+    password: "ana12345",
+    rol: "administrador"
+  },
+  {
+    id: 2,
+    nombre: "Luis García",
+    email: "luis@example.com",
+    password: "luis2024",
+    rol: "voluntario"
+  }
+  // ...
+];
 /* 
 export const CATEGORIAS = ["Idiomas", "Profesiones", "Deportes"];
 export const TIPO = ["Oferta", "Peticion"];
