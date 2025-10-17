@@ -4,33 +4,103 @@
 window.voluntariados = [
   {
     id: 1,
-    tipo: "oferta", // "oferta" o "peticion"
+    tipo: "peticion", // "oferta" o "peticion"
     categoria: "idiomas",
-    titulo: "Clases de inglés A2 - Conversación",
+    titulo: "Voluntario de conversación en inglés",
     autor: "Ana",
     modalidad: "Online",
-    descripcion: "Sesiones prácticas centradas en speaking y vocabulario de situaciones reales.",
-    fecha: "2025-10-07"
+    descripcion: "Busco a alguien que quiera dedicar 1 hora a la semana para practicar conversación en inglés conmigo. Nivel B1. Me gustaría mejorar la fluidez para entrevistas de trabajo.",
+    fecha: "2025-11-25"
   },
   {
     id: 2,
-    tipo: "peticion",
+    tipo: "oferta",
     categoria: "deportes",
-    titulo: "Busco entrenador de running",
+    titulo: "Clases de natación para principiantes",
     autor: "Luis",
     modalidad: "Presencial",
-    descripcion: "Me gustaría mejorar mi técnica para preparar una 10K.",
-    fecha: "2025-11-15"
+    descripcion: "Ofrezco enseñar los conceptos básicos de natación a niños o adultos que estén empezando. Solo fines de semana en piscina pública. Soy socorrista certificado.",
+    fecha: "2025-12-05"
   },
   {
     id: 3,
-    tipo: "oferta",
+    tipo: "peticion",
     categoria: "profesiones",
-    titulo: "Mentoría en diseño gráfico",
+    titulo: "Ayuda con diseño gráfico básico",
+    autor: "Luis",
+    modalidad: "Online",
+    descripcion: "Necesito la ayuda de un profesional de diseño gráfico (estudiante o aficionado avanzado) para crear un logo y una plantilla de folleto para una pequeña ONG local. Se requiere manejo de software básico.",
+    fecha: "2025-12-10"
+  },
+  {
+    id: 4,
+    tipo: "oferta",
+    categoria: "deportes",
+    titulo: "Entrenador de voleibol femenino",
+    autor: "Luis",
+    modalidad: "Presencial",
+    descripcion: "Ofrezco mis servicios como entrenador voluntario de voleibol para un equipo amateur o grupo de amigos. Experiencia de 5 años como jugador y 2 como monitor.",
+    fecha: "2025-11-10"
+  },
+  {
+    id: 5,
+    tipo: "peticion",
+    categoria: "deportes",
+    titulo: "Compañero para entrenamientos de baloncesto",
+    autor: "María",
+    modalidad: "Presencial",
+    descripcion: "Busco un compañero/a para entrenar y jugar partidos de baloncesto 2 veces por semana. Nivel intermedio. Quiero preparar una maratón local.",
+    fecha: "2025-11-01"
+  },
+  {
+    id: 6,
+    tipo: "peticion",
+    categoria: "profesiones",
+    titulo: "Clases de apoyo de matemáticas",
+    autor: "María",
+    modalidad: "Presencial",
+    descripcion: "Mi hijo necesita apoyo voluntario de un profesor o estudiante de matemáticas a nivel de ESO, 2 tardes a la semana, para repasar conceptos básicos.",
+    fecha: "2025-11-15"
+  },
+  {
+    id: 7,
+    tipo: "peticion",
+    categoria: "idiomas",
+    titulo: "Tutor de japonés - Nivel inicial",
+    autor: "Ana",
+    modalidad: "Online",
+    descripcion: "Me encantaría aprender los conceptos básicos del idioma japonés (Hiragana, Katakana y saludos). Busco un tutor voluntario que me guíe de forma inicial una vez por semana.",
+    fecha: "2025-12-20"
+  },
+  {
+    id: 8,
+    tipo: "oferta",
+    categoria: "idiomas",
+    titulo: "Tutorías de español para extranjeros",
     autor: "María",
     modalidad: "Online",
-    descripcion: "Asesoría para mejorar portfolio y orientación laboral en sector creativo.",
-    fecha: "2025-10-22"
+    descripcion: "Ofrezco mi tiempo para ayudar a extranjeros a practicar y mejorar su español conversacional o gramática. Soy hablante nativo y tengo experiencia previa. Disponible en línea o presencial.",
+    fecha: "2025-11-01"
+  },
+  {
+    id: 9,
+    tipo: "oferta",
+    categoria: "profesiones",
+    titulo: "Asesoría de CV y entrevistas (IT)",
+    autor: "María",
+    modalidad: "Online",
+    descripcion: "Soy profesional de Recursos Humanos en el sector IT. Ofrezco mi tiempo para revisar currículums, cartas de presentación y simular entrevistas de trabajo. Sesiones de 1 hora.",
+    fecha: "2025-11-22"
+  },
+  {
+    id: 10,
+    tipo: "oferta",
+    categoria: "idiomas",
+    titulo: "Traducción simple (Francés-Español)",
+    autor: "Ana",
+    modalidad: "Presencial",
+    descripcion: "Ofrezco traducciones voluntarias sencillas de textos cortos o corrección de documentos entre francés y español (o viceversa). Nivel C1 en francés.",
+    fecha: "2025-11-29"
   }
 ];
 

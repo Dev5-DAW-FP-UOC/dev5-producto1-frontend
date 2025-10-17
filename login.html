@@ -1,50 +1,149 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Volunet - Dashboard</title>
     <!-- Bootstrap CSS por CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
     <!-- Bootstrap Iconspor CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <!-- CSS -->
-    <link href="css/main.css" rel="stylesheet">
-</head>
-<body>
-    <!-- Barra de navegación -->     
+    <link href="css/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-lg bg-white border-bottom">
-        <div class="container">
-            <a class="navbar-brand d-flex aling-items-center" href="index.html">
-                <img src="/assets/img/logo_volunet.png" alt="Logo Volunte" height="36" class="me-2" style="max-width:130px; object-fit:contain;">                
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarMain" aria-controls="navMain" aria-expanded="false" aria-label="Mostrar menú">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse " id="navBarMain">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-4">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Dashboard</a></li>
-                    <li class="nav-item"><a class="nav-link" href="voluntariados.html">Gestión de voluntarioados</a></li>
-                    <li class="nav-item"><a class="nav-link" href="usuarios.html">Gestión de usuarios</a></li>
-                    <li class="nav-item"><a class="nav-link active fw-semibold" aria-current="page" href="login.html">Login</a></li>
-                    <li class="nav-item d-flex algn-items-center ms-3">
-                        <span id="usuarioActivo" class="text-secondary" aria-label="Usuario actual">
-                            <i class="bi bi-person-circle fs-5 me-1"></i>
-                            -no login-
-                        </span>
-                    </li>
-                </ul>
-            </div>
+      <div class="container">
+        <a class="navbar-brand d-flex aling-items-center" href="index.html">
+          <img
+            src="/assets/img/logo_volunet.png"
+            alt="Logo Volunte"
+            height="36"
+            class="me-2"
+            style="max-width: 130px; object-fit: contain"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navBarMain"
+          aria-controls="navMain"
+          aria-expanded="false"
+          aria-label="Mostrar menú"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navBarMain">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-4">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="voluntariados.html"
+                >Gestión de voluntarioados</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="usuarios.html">Gestión de usuarios</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active fw-semibold"
+                aria-current="page"
+                href="login.html"
+                >Login</a
+              >
+            </li>
+            <li class="nav-item d-flex algn-items-center ms-3">
+              <div class="ms-auto d-flex align-items-center">
+                <span id="usuarioNavbar" class="ms-2"></span>
+              </div>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <!-- CONTENIDO -->
-  
+    <main class="min-vh-100 d-flex align-items-center justify-content-center">
+      <div
+        class="card shadow p-4"
+        style="max-width: 400px; width: 100%; border-radius: 1.5rem"
+      >
+        <div class="text-center mb-3">
+          <img
+            src="assets/img/logo_volunet.png"
+            alt="Logo Volunet"
+            style="height: 56px"
+          />
+        </div>
+        <h2 class="mb-1 text-center fw-bold">Inicia sesión en tu cuenta</h2>
+        <p class="mb-4 text-center text-muted" style="font-size: 1.06em">
+          Accede a la plataforma de voluntariado<br />para gestionar tus
+          proyectos.
+        </p>
+        <form id="loginForm" autocomplete="on">
+          <div class="mb-3">
+            <label for="loginEmail" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="loginEmail"
+              required
+              placeholder="usuario@mail.com"
+              autocomplete="username"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="loginPassword" class="form-label">Contraseña</label>
+            <input
+              type="password"
+              class="form-control"
+              id="loginPassword"
+              required
+              placeholder="*******"
+              autocomplete="current-password"
+            />
+          </div>
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="loginRecordarme"
+            />
+            <label class="form-check-label" for="loginRecordarme"
+              >Recordarme</label
+            >
+          </div>
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary fs-5">
+              Iniciar sesión
+            </button>
+          </div>
+          <div
+            id="loginError"
+            class="text-danger text-center mt-3 d-none"
+          ></div>
+        </form>
+        <p class="mt-4 mb-0 text-center small">
+          ¿No tienes cuenta? <a href="#" tabindex="-1">Regístrate aquí</a>
+        </p>
+      </div>
+    </main>
     <!-- JS Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-     <!-- JS Vanilla -->
+    <!-- JS Vanilla -->
     <script src="js/datos.js"></script>
-    <script src="js/dashboard.js"></script>
-    
-</body>
+    <script src="js/login.js"></script>
+  </body>
 </html>
