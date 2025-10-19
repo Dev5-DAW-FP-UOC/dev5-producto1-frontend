@@ -231,7 +231,9 @@ footer a:hover {
     Botón "Todos" en filtros
 ================================= */
 .btn.btn-outline-secondary.active,
-.btn.btn-outline-secondary:active {
+.btn.btn-outline-secondary:active,
+.btn.btn-outline-secondary:hover,
+.btn.btn-outline-secondary:focus {
   background: var(--color-principal) !important;
   color: var(--color-blanco) !important;
   border-color: var(--color-principal) !important;
