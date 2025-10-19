@@ -25,11 +25,13 @@ const TIPOS = {
   oferta: {
     nombre: "Oferta",
     icono: "bi-arrow-up-left-circle",
+    iconoColorClass: "text-oferta",
     badgeClass: "badge-oferta",
   },
   peticion: {
     nombre: "Petición",
     icono: "bi-arrow-down-right-circle",
+    iconoColorClass: "text-peticion",
     badgeClass: "badge-peticion",
   },
 };

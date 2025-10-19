@@ -6,25 +6,23 @@
   --color-idioma-base: #65abf4; /* Azul */
   --color-idioma-suave: color-mix(in srgb, var(--color-idioma-base) 50%, white 50%);
   --color-idioma-pastel: color-mix(in srgb, var(--color-idioma-base) 20%, white 80%);
-  /* --color-idiomas-dark: #2784d7; */
+
   --color-profesion-base: #349e8f; /* Verde */
   --color-profesion-suave: color-mix(in srgb, var(--color-profesion-base) 50%, white 50%);
   --color-profesion-pastel: color-mix(in srgb, var(--color-profesion-base) 20%, white 80%);
-  /* --color-profesiones-dark: #15a35c; */
+
   --color-deporte-base: #f9ae48; /* Naranja */
   --color-deporte-suave: color-mix(in srgb, var(--color-deporte-base) 50%, white 50%);
   --color-deporte-pastel: color-mix(in srgb, var(--color-deporte-base) 20%, white 80%);
-  /* --color-deportes-dark: #ffb81c; */
 
   /* Colores tipos */
   --color-oferta: #465510;
   --color-oferta-suave: color-mix(in srgb, var(--color-oferta) 50%, white 50%);
   --color-oferta-pastel: color-mix(in srgb, var(--color-oferta) 20%, white 80%);
-  /*  --color-oferta-dark: #da2a45; */
+
   --color-peticion: #551f10;
   --color-peticion-suave: color-mix(in srgb, var(--color-peticion) 50%, white 50%);
   --color-peticion-pastel: color-mix(in srgb, var(--color-peticion) 20%, white 80%);
-  /* --color-peticion-dark: #2b3477; */
 
   /* Textos y extras */
   --color-principal: #102456; /* Color principal de Volunet */
@@ -131,6 +129,16 @@ footer a:hover {
 }
 .icono-deportes {
   color: var(--color-deporte-base);
+}
+
+/* ================================
+   Iconos de tipo (colores)
+================================= */
+.text-oferta {
+  color: var(--color-oferta) !important;
+}
+.text-peticion {
+  color: var(--color-peticion) !important;
 }
 
 /* ================================
