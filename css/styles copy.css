@@ -1,0 +1,143 @@
+/* ================================
+    Variables globales (colores y tipografía)
+================================= */
+:root {
+  /* Colores categorías */
+  --color-idioma-base: #65abf4; /* Azul */
+  --color-idioma-suave: color-mix(in srgb, var(--color-idioma-base) 50%, white 50%);
+  --color-idioma-pastel: color-mix(in srgb, var(--color-idioma-base) 20%, white 80%);
+  /* --color-idiomas-dark: #2784d7; */
+  --color-profesion-base: #349e8f; /* Verde */
+  --color-profesion-suave: color-mix(in srgb, var(--color-profesion-base) 50%, white 50%);
+  --color-profesion-pastel: color-mix(in srgb, var(--color-profesion-base) 20%, white 80%);
+  /* --color-profesiones-dark: #15a35c; */
+  --color-deporte-base: #f9ae48; /* Naranja */
+  --color-deporte-suave: color-mix(in srgb, var(--color-deporte-base) 50%, white 50%);
+  --color-deporte-pastel: color-mix(in srgb, var(--color-deporte-base) 20%, white 80%);
+  /* --color-deportes-dark: #ffb81c; */
+
+  /* Colores tipos */
+  --color-oferta: #465510;
+  --color-oferta-suave: color-mix(in srgb, var(--color-oferta) 50%, white 50%);
+  --color-oferta-pastel: color-mix(in srgb, var(--color-oferta) 20%, white 80%);
+  /*  --color-oferta-dark: #da2a45; */
+  --color-peticion: #551f10;
+  --color-peticion-suave: color-mix(in srgb, var(--color-peticion) 50%, white 50%);
+  --color-peticion-pastel: color-mix(in srgb, var(--color-peticion) 20%, white 80%);
+  /* --color-peticion-dark: #2b3477; */
+
+  /* Textos y extras */
+  --color-principal: #102456; /* Color principal de Volunet */
+  --color-fondo: #f6f8fa; /* Fondo general */
+  --color-texto: #232323; /* Texto princiapl */
+  --color-blanco: #fff;
+  --color-footer: #f4f4f4; /* Fondo footer, un poco más suave que bg-light de Bootstrap */
+  --color-borde: #e0e0e0; /* Líneas sutiles */
+}
+
+/* Fondo y texto por defecto */
+body {
+  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+.navbar,
+.card,
+.btn,
+.badge {
+  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Barra de navegación y Footer */
+footer {
+  background-color: var(--color-footer);
+}
+
+/* Enlaces del footer */
+footer a {
+  color: var(--color-footer);
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: var(--color-principal);
+}
+
+/* Colores para iconos de categoría */
+.icono-idiomas {
+  color: var(--color-idioma-base);
+}
+.icono-profesiones {
+  color: var(--color-profesion-base);
+}
+.icono-deportes {
+  color: var(--color-deporte-base);
+}
+
+/* Badge categorías */
+.badge-idioma {
+  background-color: var(--color-idioma-base);
+  color: var(--color-blanco);
+}
+.badge-profesion {
+  background-color: var(--color-profesion-base);
+  color: var(--color-blanco);
+}
+.badge-deporte {
+  background-color: var(--color-deporte-base);
+  color: var(--color-blanco);
+}
+
+/* Badge tipos */
+.badge-oferta {
+  background-color: var(--color-oferta-pastel);
+  color: var(--color-oferta);
+}
+.badge-peticion {
+  background-color: var(--color-peticion-pastel);
+  color: var(--color-peticion);
+}
+
+/* Tarjetas voluntariados */
+.volunet-card {
+  border: 1px solid var(--color-borde);
+  border-radius: 1rem;
+  background: var(--color-blanco);
+  box-shadow: 0 2px 10px rgba(76, 176, 232, 0.2);
+  transition: box-shadow 0.2s;
+}
+
+.volunet-card:hover {
+  box-shadow: 0 8px 32px rgba(76, 176, 232, 0.4);
+}
+
+/* Iconos de las tarjetas de voluntariados */
+.volunet-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.btn-ver-detalle {
+  font-size: 0.8rem;
+  padding: 0.08rem 0.3rem;
+}
+
+/* Botó principal */
+.btn-volunet {
+  background: #3499c3; /* Tono más oscuro del azul principal */
+  color: var(--color-blanco);
+}

@@ -5,14 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard de Voluntariados</title>
     <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
     <!-- Bootstrap Iconos -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <!-- Fuente web Inter de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap" rel="stylesheet" />
     <!-- CSS personalizado -->
     <link rel="stylesheet" href="css/styles.css" />
   </head>
@@ -23,15 +20,7 @@
         <a href="index.html" class="navbar-brand">
           <img src="assets/img/logo_volunet.png" alt="Logo Volunet" height="50" />
         </a>
-        <button
-          type="button"
-          class="navbar-toggler"
-          data-bs-toggle="collapse"
-          data-bs-target="#mainNav"
-          aria-controls="mainNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="mainNav">
@@ -71,20 +60,19 @@
       <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
         <div class="text-secondary small mb-2 mb-md-0">© 2025 - Proyecto educativo</div>
         <div>
-          <a href="#" class="text-secondary">Aviso legal</a>
+          <a href="#" class="text-decoration-none">Aviso legal</a>
           <span class="text-secondary mx-2">|</span>
-          <a href="#" class="text-secondary">Contacto</a>
+          <a href="#" class="text-decoration-none">Contacto</a>
         </div>
       </div>
     </footer>
     <!-- Bootstrap JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- Arrays y objetos de configuración -->
+    <script src="js/config.js"></script>
     <!-- Archivo de datos (arrays de voluntariados y usuarios) -->
     <script src="js/datos.js"></script>
     <!-- JS principal -->
+    <script src="js/dashboard.js"></script>
   </body>
 </html>

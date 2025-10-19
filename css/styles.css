@@ -1,0 +1,269 @@
+/* ================================
+    Variables globales (colores y tipografía)
+================================= */
+:root {
+  /* Colores categorías */
+  --color-idioma-base: #65abf4; /* Azul */
+  --color-idioma-suave: color-mix(in srgb, var(--color-idioma-base) 50%, white 50%);
+  --color-idioma-pastel: color-mix(in srgb, var(--color-idioma-base) 20%, white 80%);
+  /* --color-idiomas-dark: #2784d7; */
+  --color-profesion-base: #349e8f; /* Verde */
+  --color-profesion-suave: color-mix(in srgb, var(--color-profesion-base) 50%, white 50%);
+  --color-profesion-pastel: color-mix(in srgb, var(--color-profesion-base) 20%, white 80%);
+  /* --color-profesiones-dark: #15a35c; */
+  --color-deporte-base: #f9ae48; /* Naranja */
+  --color-deporte-suave: color-mix(in srgb, var(--color-deporte-base) 50%, white 50%);
+  --color-deporte-pastel: color-mix(in srgb, var(--color-deporte-base) 20%, white 80%);
+  /* --color-deportes-dark: #ffb81c; */
+
+  /* Colores tipos */
+  --color-oferta: #465510;
+  --color-oferta-suave: color-mix(in srgb, var(--color-oferta) 50%, white 50%);
+  --color-oferta-pastel: color-mix(in srgb, var(--color-oferta) 20%, white 80%);
+  /*  --color-oferta-dark: #da2a45; */
+  --color-peticion: #551f10;
+  --color-peticion-suave: color-mix(in srgb, var(--color-peticion) 50%, white 50%);
+  --color-peticion-pastel: color-mix(in srgb, var(--color-peticion) 20%, white 80%);
+  /* --color-peticion-dark: #2b3477; */
+
+  /* Textos y extras */
+  --color-principal: #102456; /* Color principal de Volunet */
+  --color-blanco: #fff;
+  --color-texto: #232323; /* Texto princiapl */
+  --color-texto-footer: #6c757d;
+  --color-background: #f6f8fa; /* Fondo general */
+  --color-backgroud-footer: #f4f4f4; /* Fondo footer, un poco más suave que bg-light de Bootstrap */
+  --color-borde: #e0e0e0; /* Líneas sutiles */
+}
+
+/* ================================
+    Tipografía
+================================= */
+/* Fondo y texto por defecto */
+body {
+  font-family: "Inter", Helvetica, Arial, sans-serif;
+  color: var(--color-texto);
+  background-color: var(--color-background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
+}
+
+/* ================================
+    Footer
+================================= */
+footer {
+  background: var(--color-backgroud-footer);
+  color: #6c757d;
+  font-size: 1rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--color-borde);
+}
+
+footer a {
+  color: var(--color-texto-footer);
+  text-decoration: none;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  transition: color 0.2s;
+  font-weight: 500;
+}
+
+footer a:hover {
+  color: var(--color-principal);
+}
+
+/* ================================
+    Tarjeta y badges
+================================= */
+.volunet-card {
+  border: 1px solid var(--color-borde, #e0e0e0);
+  border-radius: 1rem;
+  background: var(--color-blanco);
+  box-shadow: 0 2px 10px rgba(76, 176, 232, 0.2);
+  transition: box-shadow 0.25s;
+}
+
+.volunet-card:hover,
+.volunet-card:focus-within {
+  box-shadow: 0 8px 32px rgba(76, 176, 232, 0.4);
+}
+
+.badge-idioma {
+  background: var(--color-idioma-base);
+  color: var(--color-texto);
+}
+
+.badge-profesion {
+  background: var(--color-profesion-base);
+  color: var(--color-texto);
+}
+
+.badge-deporte {
+  background: var(--color-deporte-base);
+  color: var(--color-texto);
+}
+
+.badge-oferta {
+  background: var(--color-oferta-pastel);
+  color: var(--color-texto);
+}
+
+.badge-peticion {
+  background: var(--color-peticion-pastel);
+  color: var(--color-blanco);
+}
+
+/* ================================
+    Iconos de categoría
+================================= */
+.icono-idiomas {
+  color: var(--color-idioma-base);
+}
+.icono-profesiones {
+  color: var(--color-profesion-base);
+}
+.icono-deportes {
+  color: var(--color-deporte-base);
+}
+
+/* ================================
+    Botones de filtro (tipo y categoría) (estilos, hover y active)
+================================= */
+
+/* IDIOMA */
+.btn.badge-idioma {
+  border-color: var(--color-idioma-base) !important;
+  color: var(--color-idioma-base) !important;
+  background: var(--color-blanco) !important;
+}
+.btn.badge-idioma.active,
+.btn.badge-idioma:active,
+.btn.badge-idioma:hover,
+.btn.badge-idioma:focus {
+  background: var(--color-idioma-base) !important;
+  color: var(--color-blanco) !important;
+  border-color: var(--color-idioma-base) !important;
+}
+.btn.badge-idioma .bi {
+  color: inherit !important;
+}
+
+/* Profesion */
+.btn.badge-profesion {
+  border-color: var(--color-profesion-base) !important;
+  color: var(--color-profesion-base) !important;
+  background: var(--color-blanco) !important;
+}
+.btn.badge-profesion.active,
+.btn.badge-profesion:active,
+.btn.badge-profesion:hover,
+.btn.badge-profesion:focus {
+  background: var(--color-profesion-base) !important;
+  color: var(--color-blanco) !important;
+  border-color: var(--color-profesion-base) !important;
+}
+.btn.badge-profesion .bi {
+  color: inherit !important;
+}
+
+/* DEPORTE */
+.btn.badge-deporte {
+  border-color: var(--color-deporte-base) !important;
+  color: var(--color-deporte-base) !important;
+  background: var(--color-blanco) !important;
+}
+.btn.badge-deporte.active,
+.btn.badge-deporte:active,
+.btn.badge-deporte:hover,
+.btn.badge-deporte:focus {
+  background: var(--color-deporte-base) !important;
+  color: var(--color-blanco) !important;
+  border-color: var(--color-deporte-base) !important;
+}
+.btn.badge-deporte .bi {
+  color: inherit !important;
+}
+
+/* OFERTA */
+.btn.badge-oferta {
+  border-color: var(--color-oferta) !important;
+  color: var(--color-oferta) !important;
+  background: var(--color-blanco) !important;
+}
+.btn.badge-oferta.active,
+.btn.badge-oferta:active,
+.btn.badge-oferta:hover,
+.btn.badge-oferta:focus {
+  background: var(--color-oferta-pastel) !important;
+  color: var(--color-blanco) !important;
+  border-color: var(--color-oferta) !important;
+}
+.btn.badge-oferta .bi {
+  color: inherit !important;
+}
+
+/* PETICIÓN */
+.btn.badge-peticion {
+  border-color: var(--color-peticion) !important;
+  color: var(--color-peticion) !important;
+  background: var(--color-blanco) !important;
+}
+.btn.badge-peticion.active,
+.btn.badge-peticion:active,
+.btn.badge-peticion:hover,
+.btn.badge-peticion:focus {
+  background: var(--color-peticion-pastel) !important;
+  color: var(--color-blanco) !important;
+  border-color: var(--color-peticion) !important;
+}
+.btn.badge-peticion .bi {
+  color: inherit !important;
+}
+
+/* ================================
+    Botón "Todos" en filtros
+================================= */
+.btn.btn-outline-secondary.active,
+.btn.btn-outline-secondary:active {
+  background: var(--color-principal) !important;
+  color: var(--color-blanco) !important;
+  border-color: var(--color-principal) !important;
+}
+
+/* ================================
+    Personalización general
+================================= */
+.btn-ver-detalle {
+  font-size: 0.8rem;
+  padding: 0.15rem 0.5rem;
+}
+
+.card-title {
+  font-size: 1.2rem;
+}
+
+.card-text {
+  font-size: 0.95rem;
+}
+
+.alert-warning {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .volunet-card {
+    border-radius: 0.75rem;
+    font-size: 0.97rem;
+  }
+  .card-title {
+    font-size: 1.1rem;
+  }
+}
