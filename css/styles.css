@@ -277,3 +277,12 @@ footer a:hover {
     font-size: 1.1rem;
   }
 }
+
+.badge-admin {
+  background: var(--color-principal);
+  color: var(--color-blanco);
+}
+.badge-voluntario {
+  background: var(--color-profesion-base);
+  color: var(--color-blanco);
+}
