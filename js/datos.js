@@ -1,6 +1,5 @@
 // js/datos.js
 
-// js/datos.js
 window.voluntariados = [
   {
     id: 1,

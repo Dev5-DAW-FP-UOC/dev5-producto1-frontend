@@ -1,8 +1,8 @@
-// =============================
-// gestión-usuarios.js
-// =============================
+// js/gestión-usuarios.js
 
-// 1. Referencias a elementos
+// =============================
+// Referencias a elementos del DOM
+// =============================
 const listaUsuarios = document.getElementById("lista-usuarios");
 const btnAgregarUsuario = document.getElementById("btnAgregarUsuario");
 const modalUsuario = new bootstrap.Modal(document.getElementById("modalUsuario"));
@@ -22,7 +22,6 @@ let usuarioABorrar = null;
 // =============================
 // Renderizado de tarjetas de usuarios
 // =============================
-
 function renderizarUsuarios() {
   listaUsuarios.innerHTML = "";
   usuarios.forEach((usuario) => {
@@ -30,7 +29,9 @@ function renderizarUsuarios() {
   });
 }
 
+// =============================
 // Crea una tarjeta de usuario solo con nodos
+// =============================
 function crearTarjetaUsuario(usuario) {
   // Tarjeta principal
   const card = document.createElement("div");
@@ -161,7 +162,6 @@ btnConfirmarBorrar.addEventListener("click", () => {
 // =============================
 // Lógica de validación y guardado
 // =============================
-
 formUsuario.addEventListener("submit", function (e) {
   e.preventDefault();
 

@@ -1,8 +1,8 @@
-// =====================
-// login.js
-// =====================
+// js/login.js
 
-// 1. Referencias DOM
+// ==============================
+// Referencias a elementos del DOM
+// ==============================
 const loginForm = document.getElementById("loginForm");
 const emailInput = document.getElementById("loginEmail");
 const passwordInput = document.getElementById("loginPassword");
@@ -13,12 +13,16 @@ const usuarioNav = document.getElementById("usuarioNav");
 const usuarioNombre = document.getElementById("usuarioNombre");
 const btnLogout = document.getElementById("btnLogout");
 
-// 2. Habilitar/deshabilitar botón
+// ==============================
+// Habilitar/deshabilitar botón
+// ==============================
 loginForm.addEventListener("input", () => {
   btnLogin.disabled = !(emailInput.value && passwordInput.value);
 });
 
-// 3. Cargar email si recordado y comprobar sesión previa
+// ==============================
+// Cargar email si recordado y comprobar sesión previa
+// ==============================
 document.addEventListener("DOMContentLoaded", () => {
   const rememberedEmail = localStorage.getItem("volunet_email");
   if (rememberedEmail) {
@@ -30,7 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
   mostrarUsuarioEnNav();
 });
 
-// 4. Gestión submit login
+// ==============================
+// Gestión submit login
+// ==============================
 loginForm.addEventListener("submit", function (e) {
   e.preventDefault();
   loginError.classList.add("d-none");
@@ -74,7 +80,9 @@ loginForm.addEventListener("submit", function (e) {
   }
 });
 
-// 5. Mostrar usuario logueado (o no login) en el navbar
+// ==============================
+// Mostrar usuario logueado (o no login) en el navbar
+// ==============================
 function mostrarUsuarioEnNav() {
   const user = sessionStorage.getItem("volunet_user");
   if (user) {
@@ -87,7 +95,9 @@ function mostrarUsuarioEnNav() {
   }
 }
 
-// 6. Logout
+// ==============================
+// Logout
+// ==============================
 btnLogout.addEventListener("click", function () {
   sessionStorage.removeItem("volunet_user");
   mostrarUsuarioEnNav();

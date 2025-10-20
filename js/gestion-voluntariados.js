@@ -1,8 +1,8 @@
-// =============================
-// gestion-voluntariados.js
-// =============================
+// js/gestion-voluntariados.js
 
-// ------- 1. Referencias y configuración de modales Bootstrap --------
+// =============================
+// Referencias y configuración de modales Bootstrap
+// =============================
 
 // Instanciar modales Bootstrap
 const modalVoluntariado = new bootstrap.Modal(document.getElementById("modalVoluntariado"));
@@ -32,7 +32,9 @@ const btnConfirmarBorrar = document.getElementById("btnConfirmarBorrar");
 // Contenedor principal de tarjetas
 const contenedor = document.getElementById("lista-voluntariados");
 
-// ------- 2. Renderizado de tarjetas de voluntariados --------
+// =============================
+// Renderizado de tarjetas de voluntariados
+// =============================
 
 function renderizarVoluntariados() {
   contenedor.innerHTML = ""; // Limpia el contenedor
@@ -46,7 +48,7 @@ function renderizarVoluntariados() {
     const fila = document.createElement("div");
     fila.className = "d-flex flex-row flex-md-row flex-column align-items-start align-items-md-center justify-content-between";
 
-    // 1. Contenedor de iconos de tipo y categoría
+    // Contenedor de iconos de tipo y categoría
     const iconosDiv = document.createElement("div");
     iconosDiv.className = "d-flex align-items-center gap-1";
 
@@ -62,7 +64,7 @@ function renderizarVoluntariados() {
     iconoCat.innerHTML = `<i class="bi ${datosCat.icono}"></i>`;
     iconosDiv.appendChild(iconoCat);
 
-    // 2. Contenedor de datos (título, autor, modalidad)
+    // Contenedor de datos (título, autor, modalidad)
     const datosDiv = document.createElement("div");
     datosDiv.className = "flex-grow-1 min-w-0 px-3 py-1 w-100";
 
@@ -76,7 +78,7 @@ function renderizarVoluntariados() {
     autor.innerHTML = `<strong>${vol.autor || "—"}</strong>${vol.modalidad ? " · " + vol.modalidad : ""}`;
     datosDiv.appendChild(autor);
 
-    // 3. Contenedor badges (solo en escritorio)
+    // Contenedor badges (solo en escritorio)
     const badgesDiv = document.createElement("div");
     badgesDiv.className = "d-none d-md-flex flex-row align-items-center gap-2 flex-shrink-0";
 
@@ -90,7 +92,7 @@ function renderizarVoluntariados() {
     badgeCategoria.textContent = datosCat.nombre;
     badgesDiv.appendChild(badgeCategoria);
 
-    // 4. Contenedor botones de acción
+    // Contenedor botones de acción
     const accionesDiv = document.createElement("div");
     accionesDiv.className = "d-flex align-items-center gap-2 flex-shrink-0 ms-md-3 ms-auto mt-2 mt-md-0";
 
@@ -129,7 +131,9 @@ function renderizarVoluntariados() {
   });
 }
 
-// ------- 3. Gestión de modales: alta, edición, detalles, borrado -------
+// =============================
+// Gestión de modales: alta, edición, detalles, borrado
+// =============================
 
 // Abre el modal para alta (nuevo voluntariado)
 btnAgregarVoluntariado.addEventListener("click", () => {
