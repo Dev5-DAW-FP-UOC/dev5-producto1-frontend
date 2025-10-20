@@ -28,23 +28,33 @@ function renderUsuarios() {
 // Añadir nuevo usuario
 formUsuario.addEventListener("submit", e => {
   e.preventDefault();
+
+  // Generamos un ID numérico secuencial
+  // Si no hay usuarios, el primer ID será 1, de lo contrario se toma el mayor ID + 1
+  const nuevoId = usuarios.length > 0
+    ? Math.max(...usuarios.map(u => u.id)) + 1
+    : 1;
+
   const nuevo = {
-    id: Date.now(),
+    id: nuevoId, // ID secuencial
     nombre: document.getElementById("nombre").value.trim(),
     email: document.getElementById("email").value.trim(),
     password: document.getElementById("password").value.trim()
   };
-// Si el email ya existe, no se puede añadir
+
+  // Si el email ya existe, no se puede añadir
   if (usuarios.some(u => u.email === nuevo.email)) {
     alert("⚠️ Ya existe un usuario con este correo.");
     return;
   }
-// Si todo está bien, añadimos el nuevo usuario al array y refrescamos la tabla
+
+  // Si todo está bien, añadimos el nuevo usuario al array y refrescamos la tabla
   usuarios.push(nuevo);
   renderUsuarios();
   formUsuario.reset();
   alert("✅ Usuario añadido correctamente.");
 });
+
 
 // Borramos el usuario (antes de borrar, pedimos confirmación)
 function borrarUsuario(id) {

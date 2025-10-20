@@ -58,6 +58,7 @@ body {
 .filtros-container {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap; /* para adaptar mejor en pantallas pequeñas */
 }
 .filtro label {
   font-weight: bold;
@@ -298,7 +299,7 @@ body {
 .categoria-profesiones {
   padding: 2px 8px;
   border-radius: 12px;
-   background-color: #e0ffe0;
+  background-color: #e0ffe0;
 }
 
 /* Usuarios */
@@ -392,4 +393,71 @@ body {
   font-weight: bold;
   font-size: 0.85rem;
   cursor: pointer;
+}
+
+/* Diseño responsivo! */
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 992px) {
+  .my-navbar .brand-name {
+    font-size: 20px;
+  }
+  .filtros-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+/* Ajuste del dashboard a una columna */
+  #dashboard {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  .my-navbar .logo {
+    width: 70px;
+    height: 60px;
+  }
+  .my-navbar .nav-link {
+    font-size: 14px;
+  }
+/* Tablas de voluntariados y usuarios */
+  #tablaVoluntariados, #tablaUsuarios {
+    font-size: 0.85rem;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+/* Formularios */
+  #formVoluntariado, #formUsuario {
+    padding: 10px;
+  }
+  .btn-toggle {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* Ajustes para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .my-navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+  .my-navbar .brand-name {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  #formVoluntariado button,
+  #formUsuario button {
+    width: 100%;
+  }
+  .tarjeta {
+    padding: 8px;
+  }
+  .tarjeta h4 {
+    font-size: 1rem;
+  }
+  .tarjeta p {
+    font-size: 0.9rem;
+  }
 }

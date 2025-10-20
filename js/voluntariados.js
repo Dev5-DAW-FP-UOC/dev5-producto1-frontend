@@ -46,9 +46,16 @@ form.addEventListener("submit", (e) => {
     alert("⚠️ Debes iniciar sesión para crear un voluntariado.");
     return;
   }
+
+  // Generamos un ID numérico secuencial
+  // Si no hay voluntariados, el primer ID será 1, de lo contrario se toma el mayor ID + 1
+  const nuevoId = voluntariados.length > 0
+    ? Math.max(...voluntariados.map(v => v.id)) + 1
+    : 1;
+
   // Creamos el nuevo voluntariado con los datos del formulario
   const nuevo = {
-    id: Date.now(),
+    id: nuevoId, // ID secuencial
     tipo: document.getElementById("tipo").value,
     titulo: document.getElementById("titulo").value,
     fecha: document.getElementById("fecha").value,
@@ -57,10 +64,12 @@ form.addEventListener("submit", (e) => {
     modalidad: document.getElementById("modalidad").value,
     categoria: document.getElementById("categoria").value
   };
+
   // Añadimos el nuevo voluntariado al array y refrescamos la tabla
   voluntariados.push(nuevo);
   renderVoluntariados();
   form.reset();
+
   // Mostramos una alerta de éxito
   const alerta = document.createElement("div");
   alerta.className = "alert alert-success mt-3";
@@ -68,6 +77,7 @@ form.addEventListener("submit", (e) => {
   form.after(alerta);
   setTimeout(() => alerta.remove(), 2000);
 });
+
 
 // Editar voluntariado (título por ahora)
 function editarVoluntariado(id) {
