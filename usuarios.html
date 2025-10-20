@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>VOLUNET -Gestión de Usuarios</title>
+<!-- CSS -->
+ <link rel="stylesheet" href="css/style.css">
+ <link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+/>
+</head>
+<body>
+<!-- Barra de navegación  -->
+<nav class="my-navbar navbar navbar-expand-lg mb-4">
+  <div class="container-fluid d-flex align-items-center justify-content-between">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="img/volunet_logotipo.png" alt="Volunet Logo" class="logo">
+      <span class="brand-name">Volunet</span>
+    </a>
+    <!-- Voluntariado + Usuarios -->
+    <ul class="navbar-nav mx-auto fw-bold">
+      <li class="nav-item">
+        <a class="nav-link" href="voluntariados.html">📅 Gestión de Voluntariados</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="usuarios.html">👤 Gestión de Usuarios</a>
+      </li>
+    </ul>
+    <!-- Login + Logout -->
+    <div class="d-flex align-items-center">
+      <span id="userEmail" class="me-3"></span>
+      <button id="loginBtn" class="btn btn-success">Iniciar sesión</button>
+      <button id="logoutBtn" class="btn btn-danger" style="display:none;">Cerrar sesión</button>
+    </div>
+  </div>
+</nav>
+
+<!-- Alta de usuarios con collapse -->
+  <section class="mb-5">
+    <label class="btn-toggle" for="toggleFormUsuario">+ Añadir nuevo usuario</label>
+    <input type="checkbox" id="toggleFormUsuario" hidden>
+    <!-- Contenedor colapsable -->
+    <div class="collapse-css" id="formUsuarioCollapse">
+      <form id="formUsuario" class="row g-3 mt-2">
+        <!-- Nombre -->
+        <div class="col-md-4">
+          <input type="text" id="nombre" class="form-control" placeholder="Nombre" required />
+        </div>
+        <!-- Email -->
+        <div class="col-md-4">
+          <input type="email" id="email" class="form-control" placeholder="Correo" required />
+        </div>
+        <!-- Contraseña -->
+        <div class="col-md-3">
+          <input type="password" id="password" class="form-control" placeholder="Contraseña" required />
+        </div>
+        <!-- Botón de añadir -->
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Añadir</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Tabla de usuarios -->
+  <h2>Lista de usuarios</h2>
+  <table id="tablaUsuarios" class="table table-striped table-hover mt-3">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Email</th>
+        <th>Contraseña</th>
+        <th class="text-center">Acciones</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/usuarios.js"></script>
+</body>
+</html>

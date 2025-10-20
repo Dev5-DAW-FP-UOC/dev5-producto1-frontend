@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- En el encabezado es donde ponemos los enlaces y los metadatos -->
+<head>
+  <meta charset="UTF-8" />
+  <title>VOLUNET - Inicio</title>
+<!-- CSS -->
+ <link rel="stylesheet" href="css/style.css" />
+<!-- CSS con Bootstrap -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"  rel="stylesheet" />
+</head>
+
+<body>
+<!-- Barra de navegación  -->
+<nav class="my-navbar navbar navbar-expand-lg mb-4">
+  <div class="container-fluid d-flex align-items-center justify-content-between">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="img/volunet_logotipo.png" alt="Volunet Logo" class="logo">
+      <span class="brand-name">Volunet</span>
+    </a>
+    <!-- Voluntariado + Usuarios -->
+    <ul class="navbar-nav mx-auto fw-bold">
+      <li class="nav-item">
+        <a class="nav-link" href="voluntariados.html">📅 Gestión de Voluntariados</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="usuarios.html">👤 Gestión de Usuarios</a>
+      </li>
+    </ul>
+    <!-- Login + Logout -->
+    <div class="d-flex align-items-center">
+      <span id="userEmail" class="me-3"></span>
+      <button id="loginBtn" class="btn btn-success">Iniciar sesión</button>
+      <button id="logoutBtn" class="btn btn-danger" style="display:none;">Cerrar sesión</button>
+    </div>
+  </div>
+</nav>
+
+<!-- Filtros -->
+<section id="filtros" class="mb-4">
+  <!-- Categorías -->
+  <ul class="nav nav-tabs" id="filtrosTabs">
+  <li class="nav-item">
+    <button class="nav-link active" data-categoria="">Todas</button>
+  </li>
+  <li class="nav-item">
+    <button class="nav-link" data-categoria="deportes">Deportes</button>
+  </li>
+  <li class="nav-item">
+    <button class="nav-link" data-categoria="idiomas">Idiomas</button>
+  </li>
+  <li class="nav-item">
+    <button class="nav-link" data-categoria="profesiones">Profesiones</button>
+  </li>
+</ul>
+  <!-- Tipo -->
+<ul class="nav nav-tabs mt-2" id="tipoTabs">
+  <li class="nav-item">
+    <button class="nav-link active" data-tipo="">Todos</button>
+  </li>
+  <li class="nav-item">
+    <button class="nav-link" data-tipo="oferta">Oferta</button>
+  </li>
+  <li class="nav-item">
+    <button class="nav-link" data-tipo="peticion">Petición</button>
+  </li>
+</ul>
+</ul>
+</section>
+<!-- Datos + Identificador + Variables de Dash -->
+<main id="dashboard" class="p-3"></main>
+  <script src="js/data.js"></script> <!-- Primero cargamos los datos -->
+  <script src="js/auth.js"></script> <!-- Luego el identificador -->
+  <script src="js/dashboard.js"></script>
+</body>
+</html> 

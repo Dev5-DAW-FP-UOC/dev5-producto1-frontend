@@ -1,0 +1,395 @@
+/*Estilos*/
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+/* Barra de navegación */
+.my-navbar {
+  background-color: #ffffff;
+  padding: 10px 20px;
+}
+/* Logo + Nombre*/
+.my-navbar .logo {
+  width: 100px;
+  height: 80px;
+  border-radius: 50%;
+}
+.my-navbar .brand-name {
+  font-weight: bold;
+  font-size: 24px;
+  margin-left: 10px;
+  color: #333333;
+}
+/* Voluntariados + Usuarios */
+.my-navbar .nav-link {
+  color: #000000;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s, transform 0.2s;
+}
+.my-navbar .nav-link:hover {
+  color: #007bff;
+  transform: scale(1.05);
+}
+/* BotónLog In*/
+.my-navbar .btn-success {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+  font-weight: bold;
+}
+.my-navbar .btn-success:hover {
+  background-color: #45a049;
+}
+/* BotónLog Out*/
+.my-navbar .btn-danger {
+  font-weight: bold;
+}
+.my-navbar .btn-danger:hover {
+  background-color: #c82333;
+}
+
+/* Filtros más tarjetas de Voluntariados */
+#filtros {
+  background: #fafafa;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.filtros-container {
+  display: flex;
+  gap: 20px;
+}
+.filtro label {
+  font-weight: bold;
+}
+/* Dashboard: tarjetas */
+#dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 15px;
+  padding: 10px;
+}
+/* Colores por categoría */
+.tarjeta.idiomas { 
+  background-color: #e0f7ff;
+}
+.tarjeta.deportes { 
+  background-color: #fff3e0;
+}
+.tarjeta.profesiones { 
+  background-color: #e0ffe0;
+}
+.tarjeta span[class^="categoria-"] {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 2px 6px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: bold;
+  color: rgb(80, 80, 80);
+}
+/* Colores por tipo (para el botón) */
+.tarjeta .tipo-oferta { 
+  background-color: #4CAF50; 
+  color: white; 
+  border-radius: 5px; 
+  padding: 2px 6px; 
+  font-size: 0.85em;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.tarjeta .tipo-peticion { 
+  background-color: #FF5722; 
+  color: white; 
+  border-radius: 5px; 
+  padding: 2px 6px; 
+  font-size: 0.85em;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+/* Estilo de la tarjeta (texto)*/
+.tarjeta {
+  border-radius: 8px;
+  padding: 10px;
+  color: black;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.tarjeta h4 {
+  text-align: justify;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.tarjeta h6 {
+  font-weight: normal;
+  margin-bottom: 10px;
+  color: #6e6e6e;
+}
+.tarjeta p {
+  text-align: justify;
+  margin-bottom: 10px;
+}
+.tarjeta .fecha {
+  font-size: 0.9em;
+  color: #777;
+}
+
+/*Login*/
+.login-card {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.login-card h2 {
+  font-size: 25px; 
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.login-card label {
+  font-weight: 15px;
+  font-weight: bold;
+  color: #555555;
+}
+.login-card input.form-control {
+  font-size: 15px;
+  border-radius: 8px;
+  border: 2px solid #cccccc;
+}
+.login-card input.form-control:focus {
+  border-color: #007bff
+}
+
+/*Voluntariados*/
+/*Añadir voluntariado*/
+/* Botón que activa el collapse */
+.btn-toggle {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn-toggle:hover {
+  background-color: #0056b3;
+}
+/* Contenedor del formulario (colapsado) */
+.collapse-css {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, padding 0.3s ease;
+}
+#toggleForm:checked + .collapse-css {
+  max-height: 500px;
+  padding-top: 15px;
+}
+#formVoluntariado {
+  background-color: #f9f9f9;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+}
+.form-label {
+  font-weight: 600;
+  color: #333;
+}
+.form-control, .form-select {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+.form-control:focus, .form-select:focus {
+  border-color: #007bff;
+  box-shadow: none;
+}
+/* Botón de enviar */
+#formVoluntariado button {
+  width: 200px;
+  position: relative;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+#formVoluntariado button:hover {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+/* Tabla de voluntariados */
+#tablaVoluntariados {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+#tablaVoluntariados thead th {
+  background-color: #007bff;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+#tablaVoluntariados th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Filas*/
+#tablaVoluntariados td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+  font-size: 0.95rem;
+}
+#tablaVoluntariados tbody tr:hover {
+  background-color: #f8f9fa;
+  transition: background-color 0.2s ease-in-out;
+}
+/* Botones de tipo */
+.tipo-boton {
+  padding: 2px 8px;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+  font-size: 0.85em;
+  display: inline-block;
+  text-align: center;
+}
+.tipo-oferta {
+  padding: 2px 8px;
+  border-radius: 12px;
+  background-color: #4CAF50 !important;
+  color: white;
+}
+.tipo-peticion {
+  padding: 2px 8px;
+  border-radius: 12px;
+  background-color: #FF5722 !important;
+  color: white;
+}
+/* Botones de categoría */
+.categoria-boton {
+  padding: 2px 8px;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+  font-size: 0.85em;
+  display: inline-block;
+  text-align: center;
+}
+.categoria-idiomas {
+  padding: 2px 8px;
+  border-radius: 12px;
+  background-color: #e0f7ff;
+}
+.categoria-deportes {
+  padding: 2px 8px;
+  border-radius: 12px;
+  background-color: #fff3e0;
+}
+.categoria-profesiones {
+  padding: 2px 8px;
+  border-radius: 12px;
+   background-color: #e0ffe0;
+}
+
+/* Usuarios */
+/* Collapse formulario */
+.btn-toggle {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn-toggle:hover {
+  background-color: #0056b3;
+}
+.collapse-css {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, padding 0.3s ease;
+}
+#toggleFormUsuario:checked + .collapse-css {
+  max-height: 500px;
+  padding-top: 15px;
+}
+#formUsuario {
+  background-color: #f9f9f9;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+}
+.form-label {
+  font-weight: 600;
+  color: #333;
+}
+.form-control {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: none;
+}
+/* Botón añadir */
+#formUsuario button {
+  width: 200px;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+#formUsuario button:hover {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+/* Tabla*/
+#tablaUsuarios {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+#tablaUsuarios thead th {
+  background-color: #007bff;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+#tablaUsuarios td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+  font-size: 0.95rem;
+}
+#tablaUsuarios tbody tr:hover {
+  background-color: #f8f9fa;
+  transition: background-color 0.2s ease-in-out;
+}
+/* Botones de acción */
+#tablaUsuarios button {
+  border-radius: 12px;
+  padding: 2px 8px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
