@@ -1,42 +1,40 @@
 const ICONOS_CATEGORIA = {
-  idiomas:    { icon: "bi-book", color: "icon-idiomas", badge: "idiomas" },
-  deportes:   { icon: "bi-trophy", color: "icon-deportes", badge: "deportes" },
-  profesiones:{ icon: "bi-briefcase", color: "icon-profesiones", badge: "profesiones" }
+  idiomas: { icon: "bi-book", color: "icon-idiomas", badge: "idiomas" },
+  deportes: { icon: "bi-trophy", color: "icon-deportes", badge: "deportes" },
+  profesiones: { icon: "bi-briefcase", color: "icon-profesiones", badge: "profesiones" },
 };
 
 const ICONOS_TIPO = {
-  oferta:    { icon: "bi-arrow-up-right-circle", color: "icon-oferta", badge: "oferta" },
-  peticion:  { icon: "bi-arrow-down-left-circle", color: "icon-peticion", badge: "peticion" }
+  oferta: { icon: "bi-arrow-up-right-circle", color: "icon-oferta", badge: "oferta" },
+  peticion: { icon: "bi-arrow-down-left-circle", color: "icon-peticion", badge: "peticion" },
 };
 
 const ETIQUETAS_CATEGORIA = {
-  idiomas:      "Idiomas",
-  deportes:     "Deportes",
-  profesiones:  "Profesiones"
+  idiomas: "Idiomas",
+  deportes: "Deportes",
+  profesiones: "Profesiones",
 };
 
 const ETIQUETAS_TIPO = {
-  oferta:    "Oferta",
-  peticion:  "Petición"
+  oferta: "Oferta",
+  peticion: "Petición",
 };
 
 let tipoActual = "todos";
 let catActual = "todas";
 
 function renderVoluntariados() {
-  const container = document.getElementById('voluntariadosLista');
+  const container = document.getElementById("voluntariadosLista");
   container.innerHTML = "";
 
-  let data = voluntariados
-    .filter(v => tipoActual === "todos" || v.tipo === tipoActual)
-    .filter(v => catActual === "todas" || v.categoria === catActual);
+  let data = voluntariados.filter((v) => tipoActual === "todos" || v.tipo === tipoActual).filter((v) => catActual === "todas" || v.categoria === catActual);
 
   if (data.length === 0) {
     container.innerHTML = `<div class="col-12 text-center text-muted py-5">No hay voluntariados para esta selección.</div>`;
     return;
   }
 
-  data.forEach(v => {
+  data.forEach((v) => {
     const iconCat = ICONOS_CATEGORIA[v.categoria];
     const iconTipo = ICONOS_TIPO[v.tipo];
 
@@ -63,18 +61,18 @@ function renderVoluntariados() {
   });
 }
 
-document.querySelectorAll('.filtro-tipo').forEach(btn => {
-  btn.addEventListener('click', function() {
-    document.querySelectorAll('.filtro-tipo').forEach(b => b.classList.remove('active'));
-    this.classList.add('active');
+document.querySelectorAll(".filtro-tipo").forEach((btn) => {
+  btn.addEventListener("click", function () {
+    document.querySelectorAll(".filtro-tipo").forEach((b) => b.classList.remove("active"));
+    this.classList.add("active");
     tipoActual = this.dataset.tipo;
     renderVoluntariados();
   });
 });
-document.querySelectorAll('.filtro-cat').forEach(btn => {
-  btn.addEventListener('click', function() {
-    document.querySelectorAll('.filtro-cat').forEach(b => b.classList.remove('active'));
-    this.classList.add('active');
+document.querySelectorAll(".filtro-cat").forEach((btn) => {
+  btn.addEventListener("click", function () {
+    document.querySelectorAll(".filtro-cat").forEach((b) => b.classList.remove("active"));
+    this.classList.add("active");
     catActual = this.dataset.cat;
     renderVoluntariados();
   });
@@ -85,4 +83,4 @@ function formateaFecha(fechaISO) {
   return d.toLocaleDateString("es-ES");
 }
 
-window.addEventListener('DOMContentLoaded', renderVoluntariados);
+window.addEventListener("DOMContentLoaded", renderVoluntariados);

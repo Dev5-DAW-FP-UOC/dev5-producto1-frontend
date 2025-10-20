@@ -9,7 +9,7 @@
   --color-fondo: #f9f9fc;
   --color-blanco: #fff;
   --color-borde: #e2e8f0;
-  --font-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body {
@@ -27,34 +27,63 @@ body {
 }
 
 /* Iconos de categoría y tipo */
-.icon-idiomas { color: var(--color-idiomas) !important; }
-.icon-deportes { color: var(--color-deportes) !important; }
-.icon-profesiones { color: var(--color-profesiones) !important; }
-.icon-oferta { color: var(--color-oferta) !important; }
-.icon-peticion { color: var(--color-peticion) !important; }
+.icon-idiomas {
+  color: var(--color-idiomas) !important;
+}
+.icon-deportes {
+  color: var(--color-deportes) !important;
+}
+.icon-profesiones {
+  color: var(--color-profesiones) !important;
+}
+.icon-oferta {
+  color: var(--color-oferta) !important;
+}
+.icon-peticion {
+  color: var(--color-peticion) !important;
+}
 
 /* Icono dentro del badge de tipo (oferta/petición) */
-.icono-badge { color: #233045 !important; vertical-align: -0.1em; }
+.icono-badge {
+  color: #233045 !important;
+  vertical-align: -0.1em;
+}
 
 /* Badges personalizados */
-.badge.idiomas { background: var(--color-idiomas) !important; color: #fff !important; }
-.badge.deportes { background: var(--color-deportes) !important; color: #fff !important; }
-.badge.profesiones { background: var(--color-profesiones) !important; color: #fff !important; }
-.badge.oferta { background: var(--color-oferta) !important; color: #6d5900 !important; }
-.badge.peticion { background: var(--color-peticion) !important; color: #b03e3e !important; }
+.badge.idiomas {
+  background: var(--color-idiomas) !important;
+  color: #fff !important;
+}
+.badge.deportes {
+  background: var(--color-deportes) !important;
+  color: #fff !important;
+}
+.badge.profesiones {
+  background: var(--color-profesiones) !important;
+  color: #fff !important;
+}
+.badge.oferta {
+  background: var(--color-oferta) !important;
+  color: #6d5900 !important;
+}
+.badge.peticion {
+  background: var(--color-peticion) !important;
+  color: #b03e3e !important;
+}
 
 /* Card visual */
 .card {
   border-radius: 1.2em;
   background: var(--color-blanco);
-  box-shadow: 0 2px 6px 0 rgba(40,96,200,0.05);
+  box-shadow: 0 2px 6px 0 rgba(40, 96, 200, 0.05);
 }
 
 /* Botones de filtro INACTIVOS con colores suaves */
-.filtro-tipo, .filtro-cat {
+.filtro-tipo,
+.filtro-cat {
   border-width: 2px !important;
   font-weight: 500;
-  opacity: 0.90;
+  opacity: 0.9;
 }
 .filtro-tipo[data-tipo="todos"] {
   border-color: var(--color-azul);
@@ -119,20 +148,22 @@ body {
   border-color: var(--color-profesiones) !important;
 }
 
-.fs-4 { font-size: 1.6em; }
-.fs-5 { font-size: 1.3em; }
-
-
+.fs-4 {
+  font-size: 1.6em;
+}
+.fs-5 {
+  font-size: 1.3em;
+}
 
 /* Gestón de voluntariados */
 .vol-item.card {
   border-radius: 1.3em;
   border: 1px solid var(--color-borde);
-  box-shadow: 0 2px 8px 0 rgba(40,96,200,0.03);
+  box-shadow: 0 2px 8px 0 rgba(40, 96, 200, 0.03);
   transition: box-shadow 0.2s;
 }
 .vol-item.card:hover {
-  box-shadow: 0 6px 24px 0 rgba(40,96,200,0.11);
+  box-shadow: 0 6px 24px 0 rgba(40, 96, 200, 0.11);
 }
 .listado-voluntariados {
   background: transparent;

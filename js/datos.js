@@ -1,6 +1,4 @@
 // js/datos.js
-
-// js/datos.js
 window.voluntariados = [
   {
     id: 1,
@@ -10,7 +8,7 @@ window.voluntariados = [
     autor: "Ana",
     modalidad: "Online",
     descripcion: "Busco a alguien que quiera dedicar 1 hora a la semana para practicar conversación en inglés conmigo. Nivel B1. Me gustaría mejorar la fluidez para entrevistas de trabajo.",
-    fecha: "2025-11-25"
+    fecha: "2025-11-25",
   },
   {
     id: 2,
@@ -20,7 +18,7 @@ window.voluntariados = [
     autor: "Luis",
     modalidad: "Presencial",
     descripcion: "Ofrezco enseñar los conceptos básicos de natación a niños o adultos que estén empezando. Solo fines de semana en piscina pública. Soy socorrista certificado.",
-    fecha: "2025-12-05"
+    fecha: "2025-12-05",
   },
   {
     id: 3,
@@ -30,7 +28,7 @@ window.voluntariados = [
     autor: "Luis",
     modalidad: "Online",
     descripcion: "Necesito la ayuda de un profesional de diseño gráfico (estudiante o aficionado avanzado) para crear un logo y una plantilla de folleto para una pequeña ONG local. Se requiere manejo de software básico.",
-    fecha: "2025-12-10"
+    fecha: "2025-12-10",
   },
   {
     id: 4,
@@ -40,7 +38,7 @@ window.voluntariados = [
     autor: "Luis",
     modalidad: "Presencial",
     descripcion: "Ofrezco mis servicios como entrenador voluntario de voleibol para un equipo amateur o grupo de amigos. Experiencia de 5 años como jugador y 2 como monitor.",
-    fecha: "2025-11-10"
+    fecha: "2025-11-10",
   },
   {
     id: 5,
@@ -50,7 +48,7 @@ window.voluntariados = [
     autor: "María",
     modalidad: "Presencial",
     descripcion: "Busco un compañero/a para entrenar y jugar partidos de baloncesto 2 veces por semana. Nivel intermedio. Quiero preparar una maratón local.",
-    fecha: "2025-11-01"
+    fecha: "2025-11-01",
   },
   {
     id: 6,
@@ -60,7 +58,7 @@ window.voluntariados = [
     autor: "María",
     modalidad: "Presencial",
     descripcion: "Mi hijo necesita apoyo voluntario de un profesor o estudiante de matemáticas a nivel de ESO, 2 tardes a la semana, para repasar conceptos básicos.",
-    fecha: "2025-11-15"
+    fecha: "2025-11-15",
   },
   {
     id: 7,
@@ -70,7 +68,7 @@ window.voluntariados = [
     autor: "Ana",
     modalidad: "Online",
     descripcion: "Me encantaría aprender los conceptos básicos del idioma japonés (Hiragana, Katakana y saludos). Busco un tutor voluntario que me guíe de forma inicial una vez por semana.",
-    fecha: "2025-12-20"
+    fecha: "2025-12-20",
   },
   {
     id: 8,
@@ -80,7 +78,7 @@ window.voluntariados = [
     autor: "María",
     modalidad: "Online",
     descripcion: "Ofrezco mi tiempo para ayudar a extranjeros a practicar y mejorar su español conversacional o gramática. Soy hablante nativo y tengo experiencia previa. Disponible en línea o presencial.",
-    fecha: "2025-11-01"
+    fecha: "2025-11-01",
   },
   {
     id: 9,
@@ -90,7 +88,7 @@ window.voluntariados = [
     autor: "María",
     modalidad: "Online",
     descripcion: "Soy profesional de Recursos Humanos en el sector IT. Ofrezco mi tiempo para revisar currículums, cartas de presentación y simular entrevistas de trabajo. Sesiones de 1 hora.",
-    fecha: "2025-11-22"
+    fecha: "2025-11-22",
   },
   {
     id: 10,
@@ -100,8 +98,8 @@ window.voluntariados = [
     autor: "Ana",
     modalidad: "Presencial",
     descripcion: "Ofrezco traducciones voluntarias sencillas de textos cortos o corrección de documentos entre francés y español (o viceversa). Nivel C1 en francés.",
-    fecha: "2025-11-29"
-  }
+    fecha: "2025-11-29",
+  },
 ];
 
 window.usuarios = [
@@ -110,15 +108,15 @@ window.usuarios = [
     nombre: "Ana Ruiz",
     email: "ana@example.com",
     password: "ana12345",
-    rol: "administrador"
+    rol: "administrador",
   },
   {
     id: 2,
     nombre: "Luis García",
     email: "luis@example.com",
     password: "luis2024",
-    rol: "voluntario"
-  }
+    rol: "voluntario",
+  },
   // ...
 ];
 /* 

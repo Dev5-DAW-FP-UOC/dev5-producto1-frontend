@@ -3,19 +3,14 @@
 let editandoId = null; // null para alta, id para editar
 
 function renderVoluntariados() {
-  const cont = document.getElementById('listadoVoluntariados');
+  const cont = document.getElementById("listadoVoluntariados");
   cont.innerHTML = "";
 
-  window.voluntariados.forEach(v => {
-    const iconTipo =
-      v.tipo === "oferta" ? "bi-arrow-up-right-circle icon-oferta"
-      : "bi-arrow-down-left-circle icon-peticion";
+  window.voluntariados.forEach((v) => {
+    const iconTipo = v.tipo === "oferta" ? "bi-arrow-up-right-circle icon-oferta" : "bi-arrow-down-left-circle icon-peticion";
     const labelTipo = v.tipo.charAt(0).toUpperCase() + v.tipo.slice(1);
 
-    const iconCategoria =
-      v.categoria === "idiomas" ? "bi-book icon-idiomas"
-      : v.categoria === "deportes" ? "bi-trophy icon-deportes"
-      : "bi-briefcase icon-profesiones";
+    const iconCategoria = v.categoria === "idiomas" ? "bi-book icon-idiomas" : v.categoria === "deportes" ? "bi-trophy icon-deportes" : "bi-briefcase icon-profesiones";
     const labelCategoria = v.categoria.charAt(0).toUpperCase() + v.categoria.slice(1);
 
     cont.innerHTML += `
@@ -57,15 +52,15 @@ function renderVoluntariados() {
 
 // =============== BORRADO ===============
 function borrarVoluntariado(id) {
-  if (confirm('¿Seguro que quieres borrar este voluntariado?')) {
-    window.voluntariados = window.voluntariados.filter(v => Number(v.id) !== Number(id));
+  if (confirm("¿Seguro que quieres borrar este voluntariado?")) {
+    window.voluntariados = window.voluntariados.filter((v) => Number(v.id) !== Number(id));
     renderVoluntariados();
   }
 }
 
 // =============== DETALLE ===============
 function verDetalle(id) {
-  const v = window.voluntariados.find(x => Number(x.id) === Number(id));
+  const v = window.voluntariados.find((x) => Number(x.id) === Number(id));
   if (!v) return;
   let html = `
     <p><strong>Título:</strong> ${v.titulo}</p>
@@ -76,59 +71,59 @@ function verDetalle(id) {
     <p><strong>Descripción:</strong> ${v.descripcion}</p>
     <p><strong>Fecha:</strong> ${formateaFecha(v.fecha)}</p>
   `;
-  document.getElementById('detalleContenido').innerHTML = html;
-  const modal = new bootstrap.Modal(document.getElementById('modalDetalle'));
+  document.getElementById("detalleContenido").innerHTML = html;
+  const modal = new bootstrap.Modal(document.getElementById("modalDetalle"));
   modal.show();
 }
 
 // =============== EDITAR/ALTA ===============
-document.getElementById('btnNuevo').addEventListener('click', function() {
+document.getElementById("btnNuevo").addEventListener("click", function () {
   editandoId = null;
-  document.getElementById('modalLabel').textContent = "Nuevo voluntariado";
-  document.getElementById('formVoluntariado').reset();
-  document.getElementById('voluntariadoId').value = "";
-  const modal = new bootstrap.Modal(document.getElementById('modalVoluntariado'));
+  document.getElementById("modalLabel").textContent = "Nuevo voluntariado";
+  document.getElementById("formVoluntariado").reset();
+  document.getElementById("voluntariadoId").value = "";
+  const modal = new bootstrap.Modal(document.getElementById("modalVoluntariado"));
   modal.show();
 });
 
 function editarVoluntariado(id) {
-  const v = window.voluntariados.find(x => Number(x.id) === Number(id));
+  const v = window.voluntariados.find((x) => Number(x.id) === Number(id));
   if (!v) return;
   editandoId = Number(id);
-  document.getElementById('modalLabel').textContent = "Editar voluntariado";
-  document.getElementById('voluntariadoId').value = v.id;
-  document.getElementById('categoria').value = v.categoria;
-  document.getElementById('tipo').value = v.tipo;
-  document.getElementById('titulo').value = v.titulo;
-  document.getElementById('autor').value = v.autor;
-  document.getElementById('modalidad').value = v.modalidad;
-  document.getElementById('descripcion').value = v.descripcion;
-  document.getElementById('fecha').value = v.fecha;
-  const modal = new bootstrap.Modal(document.getElementById('modalVoluntariado'));
+  document.getElementById("modalLabel").textContent = "Editar voluntariado";
+  document.getElementById("voluntariadoId").value = v.id;
+  document.getElementById("categoria").value = v.categoria;
+  document.getElementById("tipo").value = v.tipo;
+  document.getElementById("titulo").value = v.titulo;
+  document.getElementById("autor").value = v.autor;
+  document.getElementById("modalidad").value = v.modalidad;
+  document.getElementById("descripcion").value = v.descripcion;
+  document.getElementById("fecha").value = v.fecha;
+  const modal = new bootstrap.Modal(document.getElementById("modalVoluntariado"));
   modal.show();
 }
 
-document.getElementById('formVoluntariado').addEventListener('submit', function(e) {
+document.getElementById("formVoluntariado").addEventListener("submit", function (e) {
   e.preventDefault();
   const v = {
     id: editandoId ? Number(editandoId) : Date.now(),
-    categoria: document.getElementById('categoria').value,
-    tipo: document.getElementById('tipo').value,
-    titulo: document.getElementById('titulo').value.trim(),
-    autor: document.getElementById('autor').value.trim(),
-    modalidad: document.getElementById('modalidad').value.trim(),
-    descripcion: document.getElementById('descripcion').value.trim(),
-    fecha: document.getElementById('fecha').value
+    categoria: document.getElementById("categoria").value,
+    tipo: document.getElementById("tipo").value,
+    titulo: document.getElementById("titulo").value.trim(),
+    autor: document.getElementById("autor").value.trim(),
+    modalidad: document.getElementById("modalidad").value.trim(),
+    descripcion: document.getElementById("descripcion").value.trim(),
+    fecha: document.getElementById("fecha").value,
   };
 
   if (editandoId) {
-    const idx = window.voluntariados.findIndex(x => Number(x.id) === Number(editandoId));
+    const idx = window.voluntariados.findIndex((x) => Number(x.id) === Number(editandoId));
     if (idx !== -1) window.voluntariados[idx] = v;
   } else {
     window.voluntariados.push(v);
   }
 
-  bootstrap.Modal.getInstance(document.getElementById('modalVoluntariado')).hide();
+  bootstrap.Modal.getInstance(document.getElementById("modalVoluntariado")).hide();
   renderVoluntariados();
   editandoId = null;
 });
@@ -140,4 +135,4 @@ function formateaFecha(fechaISO) {
 }
 
 // =============== INIT ===============
-window.addEventListener('DOMContentLoaded', renderVoluntariados);
+window.addEventListener("DOMContentLoaded", renderVoluntariados);
