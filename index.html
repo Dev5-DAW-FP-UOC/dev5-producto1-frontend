@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" >
+      <div class="container-fluid mx-3">
+        <a class="navbar-brand" href="#">
+            <img src="./img/logo_volunet.png" alt="Volunet" width="180">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="anuncio.html">Anuncios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="usuarios.html">Usuarios</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+
+  <!-- Filtros -->
+  <div class="d-flex justify-content-between" id="filtros">
+    <div id="tipos">
+      <span class="fw-semibold me-2">Tipo:</span>
+      <button class="btn btn-sm me-1 filtro-tipo active" tipo="todos">Todos</button>
+      <button class="btn btn-sm me-1 filtro-tipo" tipo="Oferta">Oferta</button>
+      <button class="btn btn-sm filtro-tipo" tipo="Petición">Petición</button>
+    </div>
+    <div id="categorias">
+      <span class="fw-semibold me-2">Categoría:</span>
+      <button class="btn  btn-sm me-1 filtro-cat active" categoria="todas">Todas</button>
+      <button class="btn  btn-sm me-1 filtro-cat" categoria="Idiomas">Idiomas</button>
+      <button class="btn  btn-sm me-1 filtro-cat" categoria="Deportes">Deportes</button>
+      <button class="btn  btn-sm filtro-cat" categoria="Profesiones">Profesiones</button>
+    </div>
+  </div>
+
+  <!-- Tarjetas --> 
+  <div class="container mt-5">
+    <div class="row justify-content-center" id="rowCard">
+    </div>
+  </div>
+ 
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script type="module" src="./js/dashboard.js"></script> 
+
+</body>
+</html>

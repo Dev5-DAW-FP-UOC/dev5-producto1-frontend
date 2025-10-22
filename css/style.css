@@ -1,0 +1,76 @@
+/*general*/
+.root{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: rgb(242, 240, 235);
+}
+
+/*index*/
+#filtros {
+    display: flex;
+    border-radius: 8px;
+}
+#tipos {
+    padding-top: 10px;
+    padding-left: 40px;
+}
+#categorias {
+    padding-top: 10px;
+    padding-right: 40px;
+}
+.card{
+    transition: .5s;
+}
+.card:hover{
+    transform: scale(110%);
+}
+.card.Petición{
+    background-color: rgba(194, 111, 66, 0);
+    color: rgb(0, 0, 0);
+}
+.card.Oferta{
+    background-color: rgb(111, 66, 193);
+    color: white;
+}
+/*login*/
+#login{
+    width: 25rem;
+    background-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(0, 0, 0);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+}
+
+/*voluntariados*/
+.title-gestion{
+    text-align: center;
+    margin-top: 2rem;
+}
+#voluntariados-grid{
+    padding: 2rem;
+}
+#voluntariados-titulo{
+    font-weight: bold;
+    text-align: center;
+}
+
+/*usuarios*/
+.title-gestion{
+    text-align: center;
+    margin-top: 2rem;
+}
+#voluntariados-grid{
+    padding: 2rem;
+}
+#usuarios-titulo{
+    font-weight: bold;
+    text-align: center;
+}
+#email{
+    word-wrap: break-word;
+}
