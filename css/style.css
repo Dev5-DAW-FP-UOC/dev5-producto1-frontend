@@ -1,0 +1,23 @@
+.my-navbar {
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    border-bottom: 1px solid #dee2e6;
+}
+
+.logo {
+    height: 200px;
+    width: auto;
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 10px;
+    color: #333;
+}
+
+.login-card {
+    border: none;
+    border-radius: 15px;
+    background-color: #ffffff;
+}

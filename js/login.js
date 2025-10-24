@@ -1,63 +1,29 @@
-// js/login.js
-import { datos } from "./datos.js";
+import { db_inicial } from './datos.js';
 
-const $ = (s, ctx = document) => ctx.querySelector(s);
+document.addEventListener('DOMContentLoaded', () => {
+    const loginForm = document.getElementById('login-form');
+    const loginEmail = document.getElementById('login-email');
+    const loginPass = document.getElementById('login-pass');
+    const loginAlert = document.getElementById('login-alert');
 
-function setNavbarUser(name){
-  // Usa el badge si existe; si no, lo crea al vuelo
-  let badge = $("#userBadge") || document.querySelector(".navbar-text");
-  if (!badge) {
-    const container = $("#nav") || document.querySelector(".navbar .container, .navbar");
-    badge = document.createElement("span");
-    badge.className = "navbar-text small text-muted";
-    badge.id = "userBadge";
-    badge.textContent = name || "-no login-";
-    container?.appendChild(badge);
-    return;
-  }
-  badge.textContent = name || "-no login-";
-}
+    loginForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        loginAlert.style.display = 'none';
 
-document.addEventListener("DOMContentLoaded", () => {
-  const form = $("#loginForm");
-  const msg  = $("#msg");
-  $("#email")?.focus();
+        const email = loginEmail.value;
+        const pass = loginPass.value;
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
+        const db = db_inicial;
+        
+        const user = db.users.find(u => u.email === email && u.pass === pass);
 
-    const email = form.email.value.trim();
-    const password = form.password.value.trim();
-
-    if (!email || !password) {
-      msg.innerHTML = `<div class="alert alert-danger">Introduce email y contraseña.</div>`;
-      return;
-    }
-
-    const user = (datos.usuarios || []).find(u =>
-      u.email === email && u.password === password
-    );
-
-    if (!user) {
-      msg.innerHTML = `<div class="alert alert-danger">Credenciales no válidas.</div>`;
-      return;
-    }
-
-    // Sesión SOLO en memoria (P1)
-    datos.session = datos.session || {};
-    datos.session.currentUser = {
-      id: user.id,
-      email: user.email,
-      nombre: user.nombre || user.email,
-      rol: user.rol || "usuario",
-    };
-
-    // ✅ Ventanilla nativa 
-    alert("Inicio de sesión exitoso");
-
-    // Pinta el nombre en la navbar de ESTA página
-    setNavbarUser(datos.session.currentUser.nombre);
-    
-    form.reset();
-  });
+        if (user) {
+            console.log("Login exitoso:", user.email);
+            sessionStorage.setItem('loggedInUser', JSON.stringify(user));
+            window.location.href = 'index.html';
+        } else {
+            console.warn("Intento de login fallido para:", email);
+            loginAlert.style.display = 'block';
+        }
+    });
 });
