@@ -1,5 +1,8 @@
 // --- Funciones del usuarios ---
 
+// Cargamos los datos del localStorage
+cargarDatos(); 
+
 //Extracción de los datos del localStorage (data.js) y funciones de auth.js
 const tablaUsuarios = document.querySelector("#tablaUsuarios tbody");
 const formUsuario = document.getElementById("formUsuario");
@@ -50,17 +53,18 @@ formUsuario.addEventListener("submit", e => {
 
   // Si todo está bien, añadimos el nuevo usuario al array y refrescamos la tabla
   usuarios.push(nuevo);
+  guardarDatos(); //Guardar usuarios en persistencia
   renderUsuarios();
   formUsuario.reset();
   alert("✅ Usuario añadido correctamente.");
 });
-
 
 // Borramos el usuario (antes de borrar, pedimos confirmación)
 function borrarUsuario(id) {
   const index = usuarios.findIndex(u => u.id === id);
   if (index > -1 && confirm("¿Seguro que quieres eliminar este usuario?")) {
     usuarios.splice(index, 1);
+    guardarDatos(); // Guardamos después de borrar
     renderUsuarios();
   }
 }

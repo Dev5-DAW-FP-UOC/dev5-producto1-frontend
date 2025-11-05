@@ -67,6 +67,7 @@ form.addEventListener("submit", (e) => {
 
   // Añadimos el nuevo voluntariado al array y refrescamos la tabla
   voluntariados.push(nuevo);
+  guardarDatos(); // Guardamos en persistencia
   renderVoluntariados();
   form.reset();
 
@@ -94,6 +95,7 @@ function borrarVoluntariado(id) {
   const index = voluntariados.findIndex(v => v.id === id);
   if (index > -1) {
     voluntariados.splice(index, 1);
+    guardarDatos(); // Guardamos después de borrar
     renderVoluntariados();
   }
 }
